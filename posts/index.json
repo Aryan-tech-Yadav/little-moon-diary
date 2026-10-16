@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "a-small-beginning",
+    "title": "A small beginning",
+    "date": "2026-10-16",
+    "category": "Life",
+    "excerpt": "Every meaningful thing starts quietly. This is a place to collect the little moments along the way.",
+    "readingTime": "2 min read",
+    "file": "posts/a-small-beginning.md"
+  },
+  {
+    "slug": "learning-in-public",
+    "title": "Learning in public",
+    "date": "2026-10-15",
+    "category": "Learning",
+    "excerpt": "A reminder that progress does not have to look impressive every single day to be real.",
+    "readingTime": "2 min read",
+    "file": "posts/learning-in-public.md"
+  },
+  {
+    "slug": "notes-from-a-quiet-night",
+    "title": "Notes from a quiet night",
+    "date": "2026-10-12",
+    "category": "Thoughts",
+    "excerpt": "Sometimes the clearest thoughts arrive when the world finally gets a little quieter.",
+    "readingTime": "1 min read",
+    "file": "posts/notes-from-a-quiet-night.md"
+  }
+]

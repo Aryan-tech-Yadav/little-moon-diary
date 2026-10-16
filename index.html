@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4ee">
+  <meta name="description" content="A quiet corner of the internet for thoughts, stories, and little discoveries.">
+  <title>Little Moon Diary — a little corner of my universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="scrapbook-theme.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Midnight Diary home"><span class="brand-mark">✦</span> little moon <span>diary</span></a>
+    <nav aria-label="Main navigation">
+      <a class="nav-link active" href="./">Home</a>
+      <a class="nav-link" href="#diary">Diary</a>
+      <a class="nav-link" href="#about">About</a>
+    </nav>
+    <a class="write-link" href="#how-to-write">How to write <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> A small corner of the internet</p>
+        <h1 id="hero-title">A little corner<br>of my <span>universe.</span></h1>
+        <p class="hero-description">Little thoughts, late-night dreams, and everyday stories. A cozy space to collect the moments that make life beautiful.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#diary">Explore my diary <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#about">A little about me <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-note"><span class="note-star">✧</span><span>Written slowly, remembered forever.</span></div>
+      </div>
+      <div class="hero-art" aria-label="A little ghost floating under a crescent moon">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <span class="tiny-star star-a">✦</span><span class="tiny-star star-b">✧</span><span class="tiny-star star-c">✦</span><span class="tiny-star star-d">·</span>
+        <div class="moon"></div>
+        <div class="ghost-wrap" id="ghost" role="img" aria-label="A cute floating ghost companion">
+          <svg class="ghost" viewBox="0 0 150 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="ghostFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffaff"/><stop offset="1" stop-color="#c9c9f5"/></linearGradient><filter id="ghostGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7"/></filter></defs>
+            <ellipse cx="75" cy="151" rx="37" ry="8" fill="#9e9dff" opacity=".22" filter="url(#ghostGlow)"/>
+            <path d="M28 139V69C28 39 48 18 75 18s47 21 47 51v70c-8-1-10-10-18-10s-10 10-19 10-11-10-20-10-11 10-19 10-10-8-18 0z" fill="url(#ghostFill)" stroke="#fff" stroke-opacity=".8" stroke-width="2"/>
+            <ellipse cx="57" cy="77" rx="5" ry="8" fill="#272544"/><ellipse cx="94" cy="77" rx="5" ry="8" fill="#272544"/>
+            <path d="M69 91q6 7 12 0" fill="none" stroke="#6c6592" stroke-width="2.5" stroke-linecap="round"/>
+            <ellipse cx="46" cy="91" rx="7" ry="4" fill="#f5a9c6" opacity=".75"/><ellipse cx="104" cy="91" rx="7" ry="4" fill="#f5a9c6" opacity=".75"/>
+            <path d="M41 34q-7 7-7 15" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+          </svg>
+          <span class="ghost-sparkle">✦</span>
+        </div>
+        <div class="art-caption"><span class="caption-dot"></span> your tiny baby ghost</div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL A LITTLE</div>
+    </section>
+
+    <section class="diary-section section-shell" id="diary" aria-labelledby="diary-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">LITTLE NOTES & DAYDREAMS</p><h2 id="diary-title">Latest <span>entries.</span></h2></div>
+        <p class="section-subtitle">Small thoughts. Real days.<br>A life in little paragraphs.</p>
+      </div>
+      <div class="diary-tools">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a thought..." aria-label="Search blog posts"></label>
+        <div id="filters" class="filters" aria-label="Filter posts by category"><button class="filter active" data-category="All">All entries</button></div>
+      </div>
+      <div id="posts" class="post-grid" aria-live="polite"><div class="loading-card">A little moonlight is finding the pages…</div></div>
+      <p id="empty-state" class="empty-state" hidden>No pages found. Try another search. ✧</p>
+      <div id="post-detail" class="post-detail" hidden>
+        <button id="back-to-posts" class="back-link">← Back to all entries</button>
+        <article id="article-content" class="article-content"></article>
+      </div>
+    </section>
+
+    <section class="about-section section-shell" id="about">
+      <div class="about-symbol" aria-hidden="true"><span>☾</span><i>✦</i><b>✧</b></div>
+      <div class="about-copy"><p class="eyebrow">A NOTE FROM THE WRITER</p><h2>Growing at my own <span>pace.</span></h2><p>This is my little space to think out loud, keep track of what I'm learning, and collect moments that might otherwise disappear. No perfect words required. Just honest ones.</p><a href="mailto:hello@example.com" class="text-link" id="contact-link">Say hello <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="how-section section-shell" id="how-to-write">
+      <div class="how-card"><div class="how-icon">✎</div><div><p class="eyebrow">YOUR DIARY, YOUR RULES</p><h2>Adding a new page is simple.</h2><p>Create a Markdown file in <code>posts/</code>, add its details to <code>posts/index.json</code>, then push to GitHub. Your diary updates when GitHub Pages publishes the changes.</p></div><a class="button button-secondary" href="README.md">Read the guide <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="./"><span class="brand-mark">✦</span> little moon <span>diary</span></a><p>Thanks for being here. May your days be softer and your dreams a little closer. ♡</p><a href="#top" class="to-top">Back to the stars ↑</a></footer>
+  <button class="baby-buddy" id="baby-buddy" type="button" aria-label="Say hello to the baby ghost">
+    <span class="buddy-bubble" id="buddy-bubble" aria-live="polite">hi, diary friend! ♡</span>
+    <svg viewBox="0 0 100 112" class="buddy-ghost" aria-hidden="true">
+      <defs><linearGradient id="buddyFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffefa"/><stop offset="1" stop-color="#f4eaff"/></linearGradient></defs>
+      <path d="M19 91V43C19 22 32 10 50 10s31 12 31 33v48c-6-1-7-7-13-7s-7 7-13 7-7-7-13-7-7 7-13 7-5-4-10 0z" fill="url(#buddyFill)" stroke="#e7c5c1" stroke-width="2.5"/>
+      <ellipse cx="39" cy="48" rx="4.4" ry="6.5" fill="#54465f"/><ellipse cx="61" cy="48" rx="4.4" ry="6.5" fill="#54465f"/>
+      <path d="M44 60q6 7 12 0" fill="none" stroke="#8b657c" stroke-width="2.5" stroke-linecap="round"/>
+      <ellipse cx="30" cy="61" rx="6" ry="3.5" fill="#f4a9bc"/><ellipse cx="70" cy="61" rx="6" ry="3.5" fill="#f4a9bc"/>
+      <path d="M27 26q-5 5-5 11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    </svg><span class="buddy-sparkle" aria-hidden="true">✦</span>
+  </button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
